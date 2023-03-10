@@ -13,23 +13,23 @@
 <script>
 export default {
     props: ['quotes'],
-    created(){
-         this.printQuote();
-     },
-     methods: {
-         printQuote(){
-             const data=await fetch('https://animechan.vercel.app/api/random').then(res=> res.json());
+    // created(){
+    //     this.printQuote();
+    // },
+    //methods: {
+    //     printQuote(){
+    //         const data=await fetch('https://animechan.vercel.app/api/random').then(res=> res.json());
              
-             if(this.quote.content){
-                 this.quotes=[...this.quotes,this.quote];
-             }
-             this.quote={
-                 content: data.quote,
-                 anime: data.anime,
-                 character: data.character
-             }
-         }
-     }
+    //         if(this.quote.content){
+    //             this.quotes=[...this.quotes,this.quote];
+    //         }
+    //         this.quote={
+    //             content: data.quote,
+    //             anime: data.anime,
+    //             character: data.character
+    //        }
+    //     }
+    // }
 
 }
 </script>
